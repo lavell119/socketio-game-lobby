@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet">
     <title>Game Lobby</title>
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
 </head>
 <body>
 
     <button class="join-table-btn">JOIN TABLE</button>
+<script>
+    const socket = io('http://localhost:3003')
+            
+            socket.on('connection')
+
+            const sendMessage = () => {
+                socket.emit('message', "Hey it worked")
+            }
+</script>
     
 </body>
 </html>
