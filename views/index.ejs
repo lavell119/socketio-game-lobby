@@ -10,13 +10,12 @@
 </head>
 <body>
 
-    <button class="join-table-btn" onClick=connection>JOIN TABLE</button>
+    <button class="join-table-btn" onClick=connection()>JOIN TABLE</button>
 <script>
 
     let connection=()=>{
-        socket.on('connection')
+        const socket = io('http://localhost:3003')
     }
-    const socket = io('http://localhost:3003')
             
             
           
