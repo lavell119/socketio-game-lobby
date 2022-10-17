@@ -1,20 +1,27 @@
 const express = require('express')
-const app = express()
-const server = require('http').createServer(app)
-const io = require('socket.io')(server, {cors: {origin: "*"}})
+const io = require('socket.io')
 
-server.listen('3003', ( req, res)=>{
-    console.log('server listening...')
+//Server setup
+const app = express()
+
+
+const server=app.listen('3003', ( req, res)=>{
+    console.log('server listening on port 3003...')
 })
 
-
+//Middleware
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
-io.on("connection" , (socket) => {
+
+//Sockets
+const socket=io(server)
+socket.on("connection" , (socket) => {
     console.log("User connected: " + socket.id)
 
-
+    socket.on('join-table', function(){
+        console.log('user joined table')
+    })
 
 })
 
