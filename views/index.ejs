@@ -14,10 +14,11 @@
     <button class="join-table-btn" onclick=connection()>JOIN TABLE</button>
 <script>
         let connection=()=>{
+            window.open("table.html")
             const socket = io.connect('http://localhost:3003')
             socket.emit('join-table')
-        }
-            
+        }      
+        
 </script>
     
 </body>
