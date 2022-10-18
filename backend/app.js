@@ -20,7 +20,15 @@ socket.on("connection" , (socket) => {
     console.log("User connected: " + socket.id)
 
     socket.on('join-table', function(){
-        console.log('user joined table')
+        console.log('user joined table')    
+    })
+    
+    socket.on('next-turn', function(){
+        console.log('next turn')
+    })
+
+    socket.on('test', function(){
+        console.log('test successful')
     })
 
 })

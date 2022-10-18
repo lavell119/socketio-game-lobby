@@ -19,6 +19,7 @@ body {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
+    background: purple;
 }
 
 .player {
@@ -26,5 +27,47 @@ body {
     height: 80px;
     background: silver;
     border-radius: 80px;
+    cursor: pointer;
+    position: relative;
 }
 
+.player:hover {
+    background: rgb(248, 248, 248);
+}
+
+.take-seat-btn {
+    background: red;
+    color: white;
+}
+
+.next-turn {
+    width: 150px;
+    height: 50px;
+    background: blue;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.red {
+    background: red;
+}
+
+
+.test {
+    width: 150px;
+    height: 50px;
+    background: rgb(0, 255, 76);
+    position: absolute;
+    bottom: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+}
