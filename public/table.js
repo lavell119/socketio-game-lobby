@@ -1,5 +1,6 @@
 const nextTurnBtn=document.querySelector('.next-turn')
 const joinTableBtn=document.getElementById('join-table-btn')
+socket = io.connect('http://localhost:3003')
 
 //Connection
 let connection=()=>{
@@ -9,7 +10,6 @@ let connection=()=>{
 }
 
 let nextTurn=()=>{
-    socket = io.connect('http://localhost:3003')
     socket.emit('next-turn')
 }
 

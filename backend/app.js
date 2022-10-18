@@ -13,7 +13,9 @@ const server=app.listen('3003', ( req, res)=>{
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
-
+let gameState={
+    turn:0
+}
 //Sockets
 const socket=io(server)
 socket.on("connection" , (socket) => {
@@ -30,7 +32,6 @@ socket.on("connection" , (socket) => {
     socket.on('test', function(){
         console.log('test successful')
     })
-
 })
 
 app.get('/', ( req, res)=>{
